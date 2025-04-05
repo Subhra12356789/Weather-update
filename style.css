@@ -1,0 +1,240 @@
+body {
+    background-color: rgb(116, 218, 252);
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+#body {
+    position: relative;
+}
+
+#city_weather {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+
+}
+
+#city_weather .city {
+    position: relative;
+    height: 38vh;
+    width: 15vw;
+    background: linear-gradient(to right, rgb(69, 233, 140), rgb(0, 255, 242));
+    border-radius: 4%;
+
+    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.762);
+    overflow: hidden;
+}
+
+#city_weather_image {
+    position: relative;
+    top: -10vh;
+    left: 11vw;
+    width: 10%;
+    height: 10%;
+    object-fit: cover;
+    border-radius: 4%;
+
+
+
+}
+
+
+.sunny {
+    position: absolute;
+    margin: 50px 50%;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: orange;
+    box-shadow: 0 0 35px 5px yellow, 0 0 25px 10px yellow inset;
+    visibility: hidden;
+}
+
+.thunder {
+    position: absolute;
+    height: 200px;
+    /* control the size */
+    aspect-ratio: 0.56;
+    clip-path: polygon(100% 0, 23% 46%, 46% 44%, 15% 69%, 38% 67%, 0 100%, 76% 57%, 53% 58%, 88% 33%, 60% 37%);
+    background: #ff8001;
+
+    top: -35%;
+    left: -10px;
+    transform: rotate(29deg);
+    visibility: hidden;
+}
+
+
+.cloud {
+    position: absolute;
+    height: 50px;
+    /* control the size */
+    aspect-ratio: 1.8;
+    --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
+    mask: var(--g) 100% 100%/30% 60%, var(--g) 70% 0/50% 100%, var(--g) 0 100%/36% 68%, var(--g) 27% 18%/26% 40%, linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
+    background: #000000;
+    left: -28px;
+    top: 63px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    z-index: 8;
+    visibility: hidden;
+}
+
+.cloud2 {
+    position: absolute;
+    height: 50px;
+    /* control the size */
+    aspect-ratio: 1.8;
+    --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
+    mask: var(--g) 100% 100%/30% 60%, var(--g) 70% 0/50% 100%, var(--g) 0 100%/36% 68%, var(--g) 27% 18%/26% 40%, linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
+    background: #696969;
+    left: -18px;
+    top: 52px;
+    visibility: hidden;
+}
+
+
+.location {
+    position: relative;
+    font-size: 150%;
+    white-space: nowrap;
+    text-align: center;
+    color: rgb(12, 16, 137);
+    font-family: "Hind Mysuru", sans-serif;
+}
+
+.status {
+    position: relative;
+    font-size: 120%;
+    text-align: center;
+    white-space: nowrap;
+    top: -13%;
+    font-family: "Lato", sans-serif;
+}
+
+.high {
+    position: relative;
+    top: -20%;
+    font-size: 250%;
+    font-family: "Lato", sans-serif;
+    left: 2%;
+    color: rgb(255, 0, 0);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.low {
+    position: relative;
+    top: -51%;
+    font-size: 250%;
+    font-family: "Lato", sans-serif;
+    left: 59%;
+    color: rgb(8, 0, 255);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+#search_box {
+    width: 50vw;
+    height: 7vh;
+    border-radius: 0px 0px 0px 0px;
+}
+
+#button {
+    border-radius: 0px 10px 10px 0px;
+    background: linear-gradient(to left, rgb(69, 233, 140), rgb(0, 255, 242));
+}
+
+#get_location{
+    border-radius: 10px 0px 0px 10px;
+    background: linear-gradient(to left, rgb(69, 233, 140), rgb(0, 255, 242));
+    
+}
+
+
+
+#search_result {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    position: relative;
+    top: -61.5vh;
+    left: -1vw;
+    background-color: #696969c5;
+    height: 100vh;
+    width: 101vw;
+    visibility: hidden;
+
+
+}
+
+#result {
+    position: relative;
+    top: 30%;
+    height: 49vh;
+    width: 20vw;
+    background: linear-gradient(to right, rgb(69, 233, 140), rgb(0, 255, 242));
+    border-radius: 4%;
+
+    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.762);
+    overflow: hidden;
+}
+
+
+
+
+#result_loc {
+    position: relative;
+    font-size: 180%;
+    white-space: nowrap;
+    text-align: center;
+    color: rgb(12, 16, 137);
+    font-family: "Hind Mysuru", sans-serif;
+
+
+}
+
+#result_result {
+    position: relative;
+    font-size: 120%;
+    text-align: center;
+    white-space: nowrap;
+    top: -13%;
+    font-family: "Lato", sans-serif;
+
+}
+
+
+
+table {
+    width: 100%;
+    text-align: center;
+
+
+}
+
+tr {
+    height: 1%;
+}
+
+td {
+    border-bottom: 1px solid #ff0000;
+
+
+}
+
+#close {
+    position: relative;
+    background-color: #00000000;
+    border: 0px solid rgba(0, 0, 0, 0);
+    top: -73%;
+    left: 85%;
+}
