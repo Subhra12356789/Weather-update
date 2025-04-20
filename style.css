@@ -1,4 +1,4 @@
-@media screen and (min-widht:1000px){
+@media screen and (min-width:1000px){
 
 body {
     background-color: rgb(116, 218, 252);
@@ -240,4 +240,14 @@ td {
     top: -73%;
     left: 85%;
 }
+}
+
+@media screen and (max-width:999px){
+    body{
+
+        display:none;
+    }
+
+
+
 }
